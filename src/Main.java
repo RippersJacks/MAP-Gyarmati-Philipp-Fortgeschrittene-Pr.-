@@ -61,5 +61,11 @@ public class Main {
 
         //Methode1
         System.out.println("Billigste Tastatur: " + elektronikShop.billigsteTastatur());
+        //Methode2
+        System.out.println("Teuerster Preis: " + elektronikShop.teuersterGegenstand());
+        //Methode3
+        System.out.println("Teuerstes USB, das Mark kaufen kann: " + elektronikShop.teuersteKaufbareUSB(45));
+        //Methode4
+        System.out.println("Hochster Geldbetrag, den Mark spenden kann: " + elektronikShop.maximalerGeldbetrag(55));
     }
 }
