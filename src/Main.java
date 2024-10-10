@@ -50,5 +50,16 @@ public class Main {
         System.out.println("Multiplikation der Zahlen: " + Arrays.toString(arrayZahlen.multiplikationBerechnen(2)));
         //Methode4
         System.out.println("Division der Zahlen: " + Arrays.toString(arrayZahlen.divisionBerechnen(2)));
+
+
+        System.out.println("\nAufgabe 4");
+
+        //Aufgabe 4
+        int[] USBpreise = new int[]{40,35,70,15,45};
+        int[] tastaturPreise = new int[]{15,20,10,35};
+        Aufgabe4 elektronikShop = new Aufgabe4(USBpreise, tastaturPreise);
+
+        //Methode1
+        System.out.println("Billigste Tastatur: " + elektronikShop.billigsteTastatur());
     }
 }
