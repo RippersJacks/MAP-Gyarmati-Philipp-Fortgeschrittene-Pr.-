@@ -33,5 +33,22 @@ public class Main {
         System.out.println("Maximale Summe von n-1 Zahlen: " + arrayOfNumbers.maximaleSumme());
         //Methode4
         System.out.println("Minimale Summe von n-1 Zahlen: " + arrayOfNumbers.minimaleSumme());
+
+
+        System.out.println("\nAufgabe 3");
+
+        //Aufgabe 3
+        int[] nummer1 = new int[]{6,5,7,0,2};
+        int[] nummer2 = new int[]{3,6,5,8,3};
+        Aufgabe3 arrayZahlen = new Aufgabe3(nummer1, nummer2);
+
+        //Methode1
+        System.out.println("Summe der Zahlen: " + Arrays.toString(arrayZahlen.summeBerechnen()));
+        //Methode2
+        System.out.println("Differenz der Zahlen: " + Arrays.toString(arrayZahlen.differenzBerechnen()));
+        //Methode3
+        System.out.println("Multiplikation der Zahlen: " + Arrays.toString(arrayZahlen.multiplikationBerechnen(2)));
+        //Methode4
+        System.out.println("Division der Zahlen: " + Arrays.toString(arrayZahlen.divisionBerechnen(2)));
     }
 }
