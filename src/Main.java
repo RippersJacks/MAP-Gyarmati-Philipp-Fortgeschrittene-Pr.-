@@ -14,7 +14,7 @@ public class Main {
         //Methode3
         System.out.println("Aufgerundete Noten: " + Arrays.toString(university.Methode3(arrayNoten)));
         //Methode4
-        System.out.println("Grosste Aufrundung: " + university.Methode4(arrayNoten));
+        System.out.println("Grosste aufgerundete Note: " + university.Methode4(arrayNoten));
 
 
     }

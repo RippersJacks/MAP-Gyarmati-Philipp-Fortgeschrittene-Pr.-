@@ -19,13 +19,19 @@ public class Aufgabe1 {
         return aux;
     }
 
-    int Methode2(int[] arrayNoten){
-        int anzahl=0, summe=0;
+    double Methode2(int[] arrayNoten){
+        double anzahl=0, summe=0;
         for (int note: arrayNoten){
             summe += note;
             anzahl++;
         }
-        return summe/anzahl;
+
+        double aufgerundeteZahl = summe / anzahl;
+        aufgerundeteZahl *= 100;  //die zwei Dezimalstellen einfuhren
+        aufgerundeteZahl = Math.ceil(aufgerundeteZahl);  //restliche Dezimalstellen loschen
+        aufgerundeteZahl /= 100;
+
+        return aufgerundeteZahl;
     }
 
     int[] Methode3(int[] arrayNoten){
@@ -50,23 +56,15 @@ public class Aufgabe1 {
         int[] abgerundeteNoten = new int[arrayNoten.length];
         int index = 0;
 
-        int maxi=0, punktAufgerundet = 0;
+        int maxi=0;
 
         for (int note: arrayNoten){
             if ((note + 1) % 5 == 0)   // z.B. 49
-                if (punktAufgerundet == 0)
-                {
-                    maxi = note;
-                    punktAufgerundet = 1;
-                }
-
+                if (note + 1 > maxi)
+                    maxi = note + 1;
             if ((note + 2) % 5 == 0)   //z.B. 48  --> grosste Aufrundung
-                if (punktAufgerundet < 2)
-                {
-                    maxi = note;
-                    punktAufgerundet = 2;
-                }
-
+                if (note + 2 > maxi)
+                    maxi = note + 2;
             index++;
         }
         return maxi;
